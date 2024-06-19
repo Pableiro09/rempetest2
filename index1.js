@@ -193,14 +193,14 @@ app.post('/vinculacion-profesional', async (req, res) => {
 async function obtenerAccessToken() {
     try {
         const postData = new URLSearchParams();
-        postData.append('grant_type', 'impersonation');
-        postData.append('impersonation_token', 'ZTIxZTM3YzQtMWVjOS00Zjg4LThjZTItZjM3YjcyMTBmNzQy');
-        postData.append('system_module_code', 'SERVICES');
-        postData.append('unit_code_type', 'UUID');
-        postData.append('unit_code_value', '990a455b-185f-4666-a921-3753820fce93');
-        postData.append('scope', 'read write');
-        postData.append('client_secret', 'FfRDEkfAdffawNybj5j9rVTLbctUAYBe');
-        postData.append('client_id', 'rempeapp');
+        postData.append('grant_type', 'x');
+        postData.append('impersonation_token', 'x');
+        postData.append('system_module_code', 'x');
+        postData.append('unit_code_type', 'x');
+        postData.append('unit_code_value', 'x');
+        postData.append('scope', 'x');
+        postData.append('client_secret', 'x');
+        postData.append('client_id', 'x');
 
         const authResponse = await axios.post('api', postData.toString(), {
             headers: {
