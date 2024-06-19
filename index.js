@@ -35,7 +35,7 @@ app.get('/datos-profesional', async (req, res) => {
         };
 
         // Realizar la solicitud GET a la API de rempe.es con el token de acceso
-        const apiResponse = await axios.get('https://test.rempe.es/rempe/api/v3/professionals', config);
+        const apiResponse = await axios.get('api', config);
 
         console.log('Datos obtenidos de la API:', apiResponse.data);  // Añadir log para depuración
 
@@ -74,7 +74,7 @@ async function obtenerAccessToken() {
         postData.append('client_secret', 'FfRDEkfAdffawNybj5j9rVTLbctUAYBe');
         postData.append('client_id', 'rempeapp');
 
-        const authResponse = await axios.post('https://test.rempe.es/rempe/oauth/token', postData, {
+        const authResponse = await axios.post('api', postData, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
