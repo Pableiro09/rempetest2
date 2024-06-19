@@ -52,7 +52,7 @@ app.post('/alta-profesional', async (req, res) => {
         };
 
         // Realizar la solicitud POST para dar de alta al profesional
-        const apiResponse = await axios.post('https://test.rempe.es/rempe/api/v3/professionals', newData, config);
+        const apiResponse = await axios.post('api', newData, config);
 
         // Imprimir la respuesta de la API
         console.log('Respuesta de la API al dar de alta al profesional:', apiResponse.data);
@@ -97,16 +97,16 @@ app.post('/alta-profesional', async (req, res) => {
 async function obtenerAccessToken() {
     try {
         const postData = new URLSearchParams();
-        postData.append('grant_type', 'impersonation');
-        postData.append('impersonation_token', 'ZTIxZTM3YzQtMWVjOS00Zjg4LThjZTItZjM3YjcyMTBmNzQy');
-        postData.append('system_module_code', 'SERVICES');
-        postData.append('unit_code_type', 'UUID');
-        postData.append('unit_code_value', '990a455b-185f-4666-a921-3753820fce93');
-        postData.append('scope', 'read write');
-        postData.append('client_secret', 'FfRDEkfAdffawNybj5j9rVTLbctUAYBe');
-        postData.append('client_id', 'rempeapp');
+        postData.append('grant_type', 'x');
+        postData.append('impersonation_token', 'x');
+        postData.append('system_module_code', 'x');
+        postData.append('unit_code_type', 'x');
+        postData.append('unit_code_value', 'x');
+        postData.append('scope', 'x');
+        postData.append('client_secret', 'x');
+        postData.append('client_id', 'x');
 
-        const authResponse = await axios.post('https://test.rempe.es/rempe/oauth/token', postData.toString(), {
+        const authResponse = await axios.post('api', postData.toString(), {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
