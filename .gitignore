@@ -1,0 +1,7 @@
+# Ignorar archivos de configuración
+config.json
+.env
+
+# Ignorar cualquier archivo que contenga claves o tokens
+*secret*
+*token*
