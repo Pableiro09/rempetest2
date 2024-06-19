@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Datos del Profesional</h1>
+        <label for="numeroColegiado">Número de Colegiado:</label>
+        <input type="text" id="numeroColegiado" name="numeroColegiado" required>
+        <button id="obtenerDatosBtn">Buscar</button>
+        <div class="container5">
+        <button onclick="window.location.href = 'http://localhost:3200/vinculacion-profesional/'" style="margin-right: 10px;background-color: #ff8353;">Vinculación Profesional</button>
+        <button onclick="window.location.href = 'http://localhost:3200/alta-profesional/' "style="background-color: #ff8353;">Alta Profesional</button>
+        </div>
+        <div id="response"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

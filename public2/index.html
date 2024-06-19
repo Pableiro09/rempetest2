@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form id="altaProfesionalForm">
+        <h1 style="text-align: center;">Dar de Alta Profesional</h1>
+        <label for="collegeNumber">Número de Colegiado:</label>
+        <input type="text" id="collegeNumber" name="collegeNumber" required><br>
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br>
+        <div class="container2">
+        <label for="surname1">Apellido 1:</label>
+        <input type="text" id="surname1" name="surname1" required><br>
+
+        <label for="surname2" style="margin-left: 10px;">Apellido 2:</label>
+        <input type="text" id="surname2" name="surname2" required><br>
+        </div>
+        <label for="personalId">DNI/NIE:</label>
+        <input type="text" id="personalId" name="personalId" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <div class="container2">
+        <label for="mobilePhone">Teléfono Móvil:</label>
+        <input type="text" id="mobilePhone" name="mobilePhone" required><br>
+
+        <label for="phone" style="margin-left: 10px;">Teléfono Fijo:</label>
+        <input type="text" id="phone" name="phone" required><br>
+        </div>
+        <button type="submit">Dar de Alta</button>
+        <div class="container5" style="margin-top: 15px;">
+            <button onclick="window.location.href = 'http://localhost:3000'" style="margin-right: 10px;background-color: #ff8353;">Datos Profesionales</button>
+            <button onclick="window.location.href = 'http://localhost:3200/vinculacion-profesional/' "style="background-color: #ff8353;">Vinculación Profesional</button>
+            </div>
+    </form>
+    <div id="response"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

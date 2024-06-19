@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinculación Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vinculación Profesional</h1>
+        <form id="vinculacionForm">
+            <label for="startDate">Fecha de Inicio:</label>
+            <input type="date" id="startDate" name="startDate" required><br><br>
+            <label for="role">Rol:</label>
+            <input type="text" id="role" name="role" required><br><br>
+            <label for="structureUnitReference">UUID de la Unidad Estructural:</label>
+            <input type="text" id="structureUnitReference" name="structureUnitReference" required>
+            <label for="colegiado">Número de Colegiado:</label>
+            <input type="text" id="colegiado" name="colegiado" required><br><br>
+            <button type="submit">Vincular</button>
+            <div class="container5" style="margin-top: 15px;">
+                <button onclick="window.location.href = 'http://localhost:3200/alta-profesional/' "style="margin-right: 10px;background-color: #ff8353;">Alta Profesional</button>
+                <button onclick="window.location.href = 'http://localhost:3000/'" style="background-color: #ff8353;">Datos Profesionales</button>
+                </div>
+        </form>
+        <div id="response"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
