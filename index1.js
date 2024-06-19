@@ -42,7 +42,7 @@ app.get('/datos-profesional', async (req, res) => {
         };
 
         // Realizar la solicitud GET a la API de rempe.es con el token de acceso
-        const apiResponse = await axios.get('https://test.rempe.es/rempe/api/v3/professionals', config);
+        const apiResponse = await axios.get('api', config);
 
         // Verificar que hay datos y devolver los primeros resultados relevantes
         const entry = apiResponse.data.entry;  // Obtener la entrada de datos
@@ -105,7 +105,7 @@ app.post('/alta-profesional', async (req, res) => {
         };
 
         // Realizar la solicitud POST para dar de alta al profesional
-        const apiResponse = await axios.post('https://test.rempe.es/rempe/api/v3/professionals', newData, config);
+        const apiResponse = await axios.post('api', newData, config);
 
         // Imprimir la respuesta de la API
         console.log('Respuesta de la API al dar de alta al profesional:', apiResponse.data);
@@ -175,7 +175,7 @@ app.post('/vinculacion-profesional', async (req, res) => {
 
         // Realizar la solicitud POST a la API de rempe.es para vincular el profesional
         const apiResponse = await axios.post(
-            `https://test.rempe.es/rempe/api/v3/professionals/${colegiado}/roles?professionalIdType=COLLEGE_NUMBER`, // Utiliza colegiado aquí
+            `api`, // Utiliza colegiado aquí
             postData,
             config
         );
@@ -202,7 +202,7 @@ async function obtenerAccessToken() {
         postData.append('client_secret', 'FfRDEkfAdffawNybj5j9rVTLbctUAYBe');
         postData.append('client_id', 'rempeapp');
 
-        const authResponse = await axios.post('https://test.rempe.es/rempe/oauth/token', postData.toString(), {
+        const authResponse = await axios.post('api', postData.toString(), {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
